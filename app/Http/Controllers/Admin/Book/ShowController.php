@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class ShowController extends BaseController
 {
-    public function index(Book $book){
-        return view('admin.book.show', compact('book'));;
+    public function show(Book $book){
+        return view('admin.book.show', compact('book'));
     }
 }

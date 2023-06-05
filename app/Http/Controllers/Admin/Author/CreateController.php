@@ -6,7 +6,7 @@ use App\Http\Controllers\Admin\Book\BaseController;
 
 class CreateController extends BaseController
 {
-    public function __invoke(){
+    public function create(){
         return view('admin.author.create');
     }
 }

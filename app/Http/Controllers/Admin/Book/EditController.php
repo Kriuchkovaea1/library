@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 class EditController extends BaseController
 {
-    public function index(Book $book)
+    public function edit(Book $book)
     {
         $genres = Genre::all();
         $authors = Author::all();

@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class UpdateController extends Controller
 {
-    public function __invoke(UpdateRequest $request, Author $author){
+    public function update(UpdateRequest $request, Author $author){
         $data = $request->validated();
         $author -> update($data);
         return view('admin.author.show', compact('author'));

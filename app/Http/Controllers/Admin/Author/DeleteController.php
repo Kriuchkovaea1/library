@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class DeleteController extends Controller
 {
-    public function delete(Author $author){
+    public function destroy(Author $author){
         $author -> delete();
         return redirect()->route('admin.author.index', compact('author'));
     }

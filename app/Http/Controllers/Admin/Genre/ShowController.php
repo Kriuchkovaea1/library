@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class ShowController extends Controller
 {
-    public function index(Genre $genre){
-        return view('admin.genre.show', compact('genre'));;
+    public function show(Genre $genre){
+        return view('admin.genre.show', compact('genre'));
     }
 }

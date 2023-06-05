@@ -1,15 +1,10 @@
 @extends('admin.layouts.main')
 @section('content')
-    <div class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1 class="m-0">Жанры</h1>
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
+    <div class="content-header" style="padding-left: 30px">
+        <h1 class="m-0">Жанры</h1>
     </div>
-    <div class="card">
+
+    <div class="card" style="padding-left: 30px">
         <div class="card-body table-responsive p-0">
             <table class="table table-hover text-nowrap">
                 <thead>
@@ -42,6 +37,8 @@
             </table>
         </div>
     </div>
+    <div style="padding-left: 30px">
         <a class="btn btn-primary" href="{{route('admin.genre.create')}}" role="button">Добавить</a>
+    </div>
 
 @endsection

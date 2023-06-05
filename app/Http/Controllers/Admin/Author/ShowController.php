@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class ShowController extends Controller
 {
-    public function index(Author $author){
-        return view('admin.author.show', compact('author'));;
+    public function show(Author $author){
+        return view('admin.author.show', compact('author'));
     }
 }

@@ -1,23 +1,15 @@
-@extends('admin.layouts.main') <!-- начинает поиск с views -->
+@extends('admin.layouts.main')
 @section('content')
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
+    <div class="wrapper" style="padding-left: 20px">
         <div class="content-header">
-            <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
                         <h1 class="m-0">Добавление автора</h1>
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-            </div><!-- /.container-fluid -->
-        </div>
-        <!-- /.content-header -->
-
-        <!-- Main content -->
+                    </div>
+                </div>
+            </div>
         <section class="content">
             <div class="container-fluid">
-                <!-- Small boxes (Stat box) -->
                 <div class="row">
                     <div class="col-12">
 
@@ -26,7 +18,8 @@
                             <div class="form-group">
 
                                 <label>
-                                    <input type="text" class="form-control" name="surname_initials" placeholder="Фамилия И.О.">
+                                    <input type="text" class="form-control" name="surname_initials"
+                                           placeholder="Фамилия И.О.">
                                 </label>
                                 @error('surname_initials')
                                 <div class="text-danger">это поле необходимо для заполнения</div>
@@ -37,11 +30,11 @@
                         </form>
                     </div>
                 </div>
-                <!-- /.row -->
 
-            </div><!-- /.container-fluid -->
+
+            </div>
         </section>
-        <!-- /.content -->
+
     </div>
-    <!-- /.content-wrapper -->
+
 @endsection('content')

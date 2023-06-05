@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class EditController extends Controller
 {
-    public function index(Author $author)
+    public function edit(Author $author)
     {
         return view('admin.author.edit', compact('author'));
     }
