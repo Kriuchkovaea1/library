@@ -14,31 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/login', function () {
-    if (Auth::check()) {
-        return redirect(route('admin.book.index'));
-    }
-    return view('login')->name('login');
-});
-//    Route::post('/login', function () {
-//        return redirect(route('admin.book.index'));
-//    });
-//    Route::get('/logout', [])->name('logout');
-    Route::get('/register', function () {
-        if (Auth::check()) {
-            return redirect(route('login'));
-        }
-        return view('register')->name('register');
 
-//    Route::post('/registration', []);
-
-
-});
-
-Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::group(['namespace' => 'Author', 'prefix' => 'authors'], function () {
         Route::get('/', [App\Http\Controllers\Admin\Author\IndexController::class, 'index'])->name('admin.author.index');
         Route::get('/create', [App\Http\Controllers\Admin\Author\CreateController::class, 'create'])->name('admin.author.create');
@@ -73,5 +50,5 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/error', [App\Http\Controllers\HomeController::class, 'index'])->name('error');
 

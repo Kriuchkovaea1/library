@@ -8,12 +8,12 @@
                     <div class="card-header">{{ __('Вход') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('login') }}">
+                        <form method="POST" action="{{ route('admin.book.index') }}">
                             @csrf
 
                             <div class="row mb-3">
                                 <label for="email"
-                                       class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+                                       class="col-md-4 col-form-label text-md-end">{{ __('Email адрес') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="email" type="email"
@@ -30,7 +30,7 @@
 
                             <div class="row mb-3">
                                 <label for="password"
-                                       class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+                                       class="col-md-4 col-form-label text-md-end">{{ __('Пароль') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="password" type="password"
@@ -57,18 +57,11 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row mb-0">
                                 <div class="col-md-8 offset-md-4">
                                     <button type="submit" class="btn btn-primary">
                                         {{ __('Войти') }}
                                     </button>
-
-                                    @if (Route::has('password.request'))
-                                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                                            {{ __('Забыли пароль?') }}
-                                        </a>
-                                    @endif
                                 </div>
                             </div>
                         </form>

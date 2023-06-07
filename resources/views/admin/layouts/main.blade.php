@@ -13,15 +13,11 @@
     <link rel="stylesheet" href="{{asset ('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')}}">
     <link rel="stylesheet" href="{{asset('plugins/select2/css/select2.min.css')}}">
     <link rel="stylesheet" href="{{asset('dist/css/adminlte.min.css')}}">
-    <link rel="stylesheet" href="{{asset('plugins/summernote/summernote-bs4.min.css"')}}">
     <link rel="stylesheet"
           href="{{asset ('https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css')}}">
-    <!-- overlayScrollbars -->
     <link rel="stylesheet" href="{{asset('plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
-    <!-- Daterange picker -->
     <link rel="stylesheet" href="{{asset('plugins/daterangepicker/daterangepicker.css')}}">
 
-    <!-- summernote -->
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -31,13 +27,11 @@
 
     </div>
 
-    <!--
     <nav class="main-header navbar navbar-expand navbar-white navbar-light ">
-
         <div class="col-12 d-flex justify-content-between">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <form action="#" method="POST">
+                    <form action="{{route('logout')}}" method="POST">
                         @csrf
                         <input class="btn btn-outline-primary " type="submit" value="Выйти">
                     </form>

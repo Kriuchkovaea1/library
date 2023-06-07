@@ -5,23 +5,23 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1 class="m-0">Книги</h1>
-                    <div class="container">
-                        <div class="col-9">
-                            <div class="search">
-                                <form action="{{ route('admin.book.index') }}" method="GET" class="w-75">
-                                    <div class="form-group col-md-10">
-                                        <input type="search" class="form-control" id="search" name="search"
-                                               placeholder="Поиск...">
-                                    </div>
-                                    <div class="col-md-2">
-                                        <button class="btn btn-outline-success" type="submit">Поиск</button>
-                                    </div>
-                                </form>
+                    <div class="search" style="margin-top: 10px">
+                        <form action="{{ route('admin.book.index') }}" method="GET" class="w-75">
+
+                            <div class="row mb">
+                                <div class="col-sm-10">
+                                    <input type="search" class="form-control" id="search" name="search"
+                                           placeholder="Поиск...">
+                                </div>
+                                <div class="col-sm-1">
+                                    <button class="btn btn-outline-success" type="submit">Поиск</button>
+                                </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
+
                     <form action="{{route('admin.book.index')}}" method="GET">
-                        <div class="form-group">
+                        <div class="form-group" style="margin-top: 10px">
                             <label>Авторы</label>
                             <select name="authorId" class="form-control">
                                 <option selected value="null"></option>
@@ -32,6 +32,7 @@
                                 @endforeach
                             </select>
                         </div>
+
                         <div style="margin-top: auto">
                             <button value="submit" class="btn btn-primary">Применить</button>
                         </div>

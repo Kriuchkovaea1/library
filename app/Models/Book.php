@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\BookEdition;
 use App\Models\Traits\Filterable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -28,6 +29,8 @@ class Book extends Model
         'name'
     ];
 
-
+    protected $editions = [
+        'edition' => BookEdition::class
+    ];
 }
 

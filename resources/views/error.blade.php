@@ -6,12 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                    {{ __('Поздравляю, Вы админ!') }}
+                    <h1 class="h1">Ошибка 404</h1>
                 </div>
             </div>
         </div>

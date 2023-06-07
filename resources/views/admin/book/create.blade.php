@@ -1,25 +1,20 @@
-@extends('admin.layouts.main') <!-- начинает поиск с views -->
+@extends('admin.layouts.main')
 @section('content')
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
+    <div class="wrapper" style="padding-left: 20px">
         <div class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
                         <h1 class="m-0" >Добавление книги</h1>
-                    </div><!-- /.col -->
+                    </div>
                     <div class="col-sm-6">
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-            </div><!-- /.container-fluid -->
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- /.content-header -->
-
-        <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
-                <!-- Small boxes (Stat box) -->
+
                 <div class="row">
                     <div class="col-12">
 
