@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::group(['namespace' => 'Author', 'prefix' => 'authors'], function () {
         Route::get('/', [App\Http\Controllers\Admin\Author\IndexController::class, 'index'])->name('admin.author.index');
@@ -49,6 +48,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/error', [App\Http\Controllers\HomeController::class, 'index'])->name('error');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
