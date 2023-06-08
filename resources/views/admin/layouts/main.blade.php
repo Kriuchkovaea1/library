@@ -22,46 +22,28 @@
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
-    <!-- Preloader -->
     <div class="preloader flex-column justify-content-center align-items-center">
 
     </div>
 
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light ">
-        <div class="col-12 d-flex justify-content-between">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <form action="{{route('logout')}}" method="POST">
-                        @csrf
-                        <input class="btn btn-outline-primary " type="submit" value="Выйти">
-                    </form>
-                </li>
-            </ul>
-        </div>
-    </nav>
-     /.navbar -->
 
     @include('admin.includes.sidebar')
 
     @yield('content')
 
 
-    <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
-        <!-- Control sidebar content goes here -->
     </aside>
-    <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
 
-<!-- jQuery -->
+</div>
+
+
+
 <script src="{{asset ('plugins/jquery/jquery.min.js')}}"></script>
-<!-- jQuery UI 1.11.4 -->
 <script src="{{asset ('plugins/jquery-ui/jquery-ui.min.js')}}"></script>
 <script src="{{asset ('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <script src="{{asset ('plugins/select2/js/select2.full.min.js')}}"></script>
 <script src="{{asset ('https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js')}}"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
     $.widget.bridge('uibutton', $.ui.button)
 </script>
@@ -72,19 +54,7 @@
 <script src="{{asset ('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
 <script src="{{asset ('dist/js/adminlte.js')}}"></script>
 <script>
-    $(document).ready(function () {
-        $('#summernote').summernote({
-            toolbar: [
-                // [groupName, [list of button]]
-                ['style', ['bold', 'italic', 'underline', 'clear']],
-                ['font', ['strikethrough', 'superscript', 'subscript']],
-                ['fontsize', ['fontsize']],
-                ['color', ['color']],
-                ['para', ['ul', 'ol', 'paragraph']],
-                ['height', ['height']]
-            ]
-        });
-    });
+
     $(function () {
         bsCustomFileInput.init();
     });

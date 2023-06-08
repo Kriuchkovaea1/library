@@ -12,12 +12,14 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{route('admin.genre.index')}}">Жанры</a>
                 </li>
+
+                <form class="col-mb-12" action="{{route('logout')}}" method="POST">
+                    @csrf
+                    <input class="btn btn-outline-primary " type="submit" value="Выйти">
+                </form>
             </ul>
         </div>
-        <div class="row">
+    </div>
 
-        </div>
-    </div>
-    </div>
 </nav>
 
