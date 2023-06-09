@@ -14,17 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/register', [App\Http\Controllers\AuthController::class, 'register']);
-
 Route::group(['namespace' => 'Books', 'prefix' => 'books'], function () {
     Route::get('/', [App\Http\Controllers\API\Books\IndexController::class, 'index']);
     Route::get('/{book}', [App\Http\Controllers\API\Books\ShowController::class, 'show']);
     Route::patch('/{book}', [App\Http\Controllers\API\Books\UpdateController::class, 'update']);
-    Route::group (['middleware'=>['auth:sanctum']], function () {
+    Route::group (['middleware'=>['auth_api']], function () {
         //Route::get('/{book}', [App\Http\Controllers\API\Books\ShowController::class, 'show']);
         //Route::put('/{book}', [App\Http\Controllers\API\Books\UpdateController::class, 'update']);
         Route::delete('/{book}', [App\Http\Controllers\API\Books\DeleteController::class, 'destroy']);
-        Route::post('/logout', [App\Http\Controllers\AuthController::class, 'logout']);
     });
 });
 Route::group(['namespace' => 'Genres', 'prefix' => 'genres'], function () {

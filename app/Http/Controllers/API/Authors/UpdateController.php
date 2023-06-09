@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Author\UpdateRequest;
 use App\Http\Resources\Author\AuthorResource;
 use App\Models\Author;
-use App\Models\Book;
 use Illuminate\Support\Facades\DB;
 
 class UpdateController extends Controller
@@ -22,6 +21,5 @@ class UpdateController extends Controller
             abort(500);
         }
         return new AuthorResource($author);
-        //return response()->json($book, 200);
     }
 }

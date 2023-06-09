@@ -36,6 +36,8 @@
                         <div style="margin-top: auto">
                             <button value="submit" class="btn btn-primary">Применить</button>
                         </div>
+                    </form>
+                    <form action="{{route('admin.book.index')}}" method="GET">
                         <div class="form-group">
                             <label>Жанры</label>
                             <select class="select2" name="genreIds[]" multiple="multiple"

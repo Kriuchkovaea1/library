@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Book;
+namespace App\Http\Controllers\API\Authors;
 
 use App\Http\Controllers\Controller;
 use App\Service\Book\BookService;

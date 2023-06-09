@@ -5,10 +5,13 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
     <link rel="stylesheet" type=text/css href="{{asset('css/virtual-select.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <title>Библиотека</title>
-
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
     <link rel="stylesheet" href="{{asset ('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')}}">
     <link rel="stylesheet" href="{{asset('plugins/select2/css/select2.min.css')}}">
@@ -38,7 +41,8 @@
 </div>
 
 
-
+<link rel="stylesheet" href="{{asset('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')}}">
+<link rel="stylesheet" href="{{asset('js/bootstrap.js')}}">
 <script src="{{asset ('plugins/jquery/jquery.min.js')}}"></script>
 <script src="{{asset ('plugins/jquery-ui/jquery-ui.min.js')}}"></script>
 <script src="{{asset ('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
