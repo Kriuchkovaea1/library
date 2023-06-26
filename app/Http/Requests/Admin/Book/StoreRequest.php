@@ -24,7 +24,7 @@ class StoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name'=>'required|string|unique:books,name',
+            'name'=>'required|string|unique:books,name|size:255',
             'author_id'=>'required|integer|exists:authors,id',
             'genre_ids'=>'nullable|array',
             'genre_ids.*'=>'integer|exists:genres,id',
@@ -36,6 +36,7 @@ class StoreRequest extends FormRequest
         return [
             'name.unique'=>'Книга с таким названием уже существует',
             'name.required'=>'Поле необходимо для заполнения',
+            'name.size'=>'Поле должно содержать не более 255 символов',
         ];
     }
 }
