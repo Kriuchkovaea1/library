@@ -19,8 +19,6 @@ Route::group(['namespace' => 'Books', 'prefix' => 'books'], function () {
     Route::get('/{book}', [App\Http\Controllers\API\Books\ShowController::class, 'show']);
     Route::patch('/{book}', [App\Http\Controllers\API\Books\UpdateController::class, 'update']);
     Route::group (['middleware'=>['auth_api']], function () {
-        //Route::get('/{book}', [App\Http\Controllers\API\Books\ShowController::class, 'show']);
-        //Route::put('/{book}', [App\Http\Controllers\API\Books\UpdateController::class, 'update']);
         Route::delete('/{book}', [App\Http\Controllers\API\Books\DeleteController::class, 'destroy']);
     });
 });
