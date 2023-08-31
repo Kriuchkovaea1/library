@@ -20,7 +20,7 @@ class BookFactory extends Factory
     public function definition(): array
     {
         return [
-            "name" => $this->faker->unique()->name(20),
+            "name" => $this->faker->unique()->title(),
             "author_id" => Author::get()->random()->id,
         ];
     }
